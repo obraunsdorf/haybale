@@ -1,0 +1,12 @@
+version: '3'
+
+
+services:
+  haybale-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../:/haybale
+    #entrypoint: "cargo build --features=llvm-10,build-boolector"
+    entrypoint: "/bin/bash"

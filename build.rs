@@ -29,4 +29,6 @@ fn main() {
     if selected_version <= 9 {
         println!("cargo:rustc-cfg=LLVM_VERSION_9_OR_LOWER");
     }
+
+    println!("cargo:rustc-link-search=nativ=/usr/local/lib")
 }
